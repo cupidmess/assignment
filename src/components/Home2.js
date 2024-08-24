@@ -17,6 +17,17 @@ import i13 from './i13.jpg.png'
 import gpt from './gpt.png'
 import { useState } from 'react'
 export default function Home2() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Handle mouse enter and leave events
+  const handleMouseEnter = () => {
+    setIsVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsVisible(false);
+  };
+
   // Handle right-click event
   const handleContextMenu = (event) => {
     event.preventDefault(); // Prevent the default right-click menu
@@ -29,10 +40,13 @@ export default function Home2() {
   const handleClick = () => {
     setMenuVisible(false);
   };
+
   return (
     <div> 
       <div className='h-box'>
-      <div className='h-box1'>
+      <div className={`h-box1 ${isVisible ? 'visible' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>
       <div className='h-i'>
       <img src ={i2} className='i2'></img>
       <img src = {i3}></img> </div>

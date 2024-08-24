@@ -25,6 +25,16 @@ export default function Home() {
   const [newName, setNewName] = useState('');
   const [renameTarget, setRenameTarget] = useState(null);
   const fileInputRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Handle mouse enter and leave events
+  const handleMouseEnter = () => {
+    setIsVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsVisible(false);
+  };
 
   // Handle right-click event
   const handleContextMenu = (event, target) => {
@@ -86,12 +96,15 @@ export default function Home() {
       // Update the image's name or any related state
       setRenameMode(false);
     }
+
   };
 
   return (
     <div>
       <div className='h-box'>
-        <div className='h-box1'>
+        <div className={`h-box1 ${isVisible ? 'visible' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>
           <div className='h-i'>
             <img src={i2} className='i2' alt="i2" />
             <img src={i3} alt="i3" />
