@@ -1,0 +1,20 @@
+@media (min-width:1195px){
+.gpt {
+  height: 650px;
+}
+.h2-box2 { 
+  margin-left: 11.5rem;
+  margin-top: 2.5rem;
+}
+}
+@media (max-width:400px){
+  .gpt {
+    height: 500px;
+    margin-bottom: 5rem;
+    margin-left: 0.5rem;
+  }
+  .h2-box2 { 
+    margin-left: 0.4rem;
+    margin-top: 2.5rem;
+  }
+  }
