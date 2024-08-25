@@ -3,7 +3,7 @@
   height: 650px;
 }
 .h2-box2 { 
-  margin-left: 11.5rem;
+  margin-left: 25rem;
   margin-top: 2.5rem;
 }
 }
@@ -17,4 +17,15 @@
     margin-left: 0.4rem;
     margin-top: 2.5rem;
   }
+  }
+  @media (min-width:1900px) {
+    .gpt {
+      height: 800px;
+      margin-bottom: 5rem;
+      
+    }
+    .h2-box2 { 
+      margin-left: 40rem;
+      margin-top: 2.5rem;
+    }
   }
